@@ -1,0 +1,152 @@
+:root {
+  --desaturated-Red: hsl(0, 36%, 70%);
+  --soft-Red: hsl(0, 93%, 68%);
+  --dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*mobile view*/
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  background-image: linear-gradient(135deg, hsla(0, 0%, 100%), to hsla(0, 100%, 98%));
+}
+.logo-holder1 {
+  width: 100%;
+}
+.logo-holder {
+  display: none;
+}
+.logo {
+  padding: 2.5rem 3rem;
+}
+.img-wrapper {
+  width: 100%;
+  height: 250px;
+  background-image: url(images/hero-mobile.jpg);
+  margin-bottom: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-content {
+ width: 100%;
+ text-align: center;
+ padding: 2rem;
+}
+h1 {
+ color: var(--desaturated-Red);
+ letter-spacing: 5px;
+ font-size: 50px;
+ padding: 0 1rem;
+ font-weight: 300;
+}
+span {
+  color: var(--dark-Grayish-Red);
+  font-weight: 600;
+}
+p {
+  color: var(--soft-Red);
+  font-weight: 400;
+  opacity: 0.6;
+  line-height: 25px;
+  margin: 30px 0;
+  font-size: 14px;
+}
+.mailbox {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+input {
+  border: 1px solid var(--desaturated-Red);
+  outline: none;
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  padding-right: 3rem;
+  background: transparent;
+}
+input:focus {
+  background-color: transparent;
+}
+input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--desaturated-Red);
+}
+.mailbox.active input {
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+  border: 2px solid var(--soft-Red);
+}
+.error-message {
+  color: var(--soft-Red);
+  display: none;
+}
+p.error-message {
+  margin: 0;
+}
+button {
+  background-image: linear-gradient( hsla(0, 80%, 86%), hsla(0, 74%, 74%));
+  box-shadow: 0 10px 10px 10px hsla(0, 74%, 74%,0.15);
+  position: absolute;
+  border: none;
+  padding: 0.8rem 1.7rem;
+  right: -20px;
+  border-radius: 30px;
+}
+/*desktop view*/
+@media only screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .logo-holder1 {
+    display: none;
+  }
+  .logo-holder{
+   display: unset;
+  }
+  .logo {
+    padding-left: 0;
+    margin-bottom: 150px;
+  }
+  .img-wrapper {
+    height: 100vh;
+    background-image: url(images/hero-desktop.jpg);
+    width: 50%;
+  }
+  .main-content {
+    text-align: left;
+    width: 40%;
+  }
+  h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  input {
+    padding-right: 4rem;
+  }
+  button {
+    padding: 0.8rem 2rem;
+    transition: 0.6s;
+  }
+  button:hover {
+    cursor: pointer;
+    background: hsl(0, 80%, 86%);
+  }
+}
